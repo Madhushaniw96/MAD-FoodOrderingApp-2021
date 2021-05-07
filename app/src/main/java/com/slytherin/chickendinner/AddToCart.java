@@ -102,7 +102,7 @@ public class AddToCart extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent MyOrders = new Intent(AddToCart.this, Orders.class);
-                startActivity(MyOrders);
+
             }
         });
 
