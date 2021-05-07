@@ -9,6 +9,7 @@ import android.widget.Button;
 public class Cart extends AppCompatActivity {
 
     Button btn_Cart;
+    Button btn_save;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,7 @@ public class Cart extends AppCompatActivity {
         setContentView(R.layout.activity_cart);
 
         btn_Cart = (Button)findViewById(R.id.btn_place_order);
+        btn_save = (Button)findViewById(R.id.btn_place_order);
 
         btn_Cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,5 +26,13 @@ public class Cart extends AppCompatActivity {
                 startActivity(cart_View);
             }
         });
+
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btn_save = new Intent(Cart.this,Orders.class);
+            }
+        });
     }
+
 }
